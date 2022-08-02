@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            border: 200px black;
+            text-align: center;
+            border-color: rgb(183, 210, 30);
+            height: 200px;
+            width: 200px;
+            margin: auto;
+            background-color: rgb(236, 222, 24);
+            border-radius: 20px ;
+            margin-bottom: auto;
+        }
+        body {
+            background-color: rgb(255, 244, 244);
+        }
+        form {
+            border-color: black;
+        }
+        #one {
+                border: 20px;
+                background-color: rgb(28, 235, 217);
+                height: 350px;
+                width: 290px;
+                margin: auto;
+                border-radius: 20px;
+        }
+        center {
+            text-decoration-color: antiquewhite;
+        }
+    </style>
+    <script type="text/javascript">
+          function divBGDynamic() {
+               document.getElementById("container").style.backgroundColor=prompt("Enter Your color Name");
+          }
+          function bodyBGDynamic() {
+                 document.body.style.backgroundColor=prompt("Enter Your Color Name");
+          }
+          function focusFunction() 
+          {
+              document.getElementById("myInput").style.background="GREY";
+          }
+          window.onload= () => {
+              document.getElementById("myInput").focus();
+          }
+    </script>
+</head>
+<body background="../img4.jpg">
+    <div id="one">
+    <center > 
+        <h1> Form </h1>
+        
+    </center>
+    <form>
+        <div id="container">
+            <label>Username :</label>
+            <input type="text" id="myInput" onfocus="focusFunction()" onblur="blurFunction()">
+            <br>
+            <br>
+            <label>E-mail id :</label>
+            <input type="text">
+            <br>
+            <br>
+            <label>Password :</label>
+            <input type="password">
+            <br>
+            <br>
+            <button type="button" onclick="alert('yes')" >Ok</button> 
+            <button type="button"onclick="alert('No')" class="cancelbtn">Cancel</button>   
+        </div>
+        <br>
+        <br>
+
+        <center>
+        <input type="button"value="background-color" onclick="divBGDynamic()"/>
+        <input type="button" value="Body background-color" onclick="bodyBGDynamic()"/>
+    </center>
+    </form>
+    </div>
+</body>
+</html>
